@@ -80,9 +80,10 @@ class PlayList {
     /** Returns the index of the track with the given title in this list.
      *  If such a track is not found, returns -1. */
     public int indexOf(String title) {
-        title.toLowerCase();
+        title = title.toLowerCase();
         for (int i = 0; i < size; i++) {
-            if(title == tracks[i].getTitle().toLowerCase()){
+            // System.out.println(tracks[i].getTitle().toLowerCase());
+            if(title.equals(tracks[i].getTitle().toLowerCase())){
                 return i;
             }
         }

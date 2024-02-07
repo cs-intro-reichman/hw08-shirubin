@@ -20,6 +20,7 @@ class RuniFi {
         myList.add(track3);
         myList.add(track4);
 
+        System.out.println(myList.indexOf("Imagine"));
         // Displays the list
         display("My list", myList);
 
