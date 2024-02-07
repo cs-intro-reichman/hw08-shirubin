@@ -20,21 +20,25 @@ class RuniFi {
         myList.add(track3);
         myList.add(track4);
 
+        System.out.println(myList.indexOf("Imagine"));
         // Displays the list
         display("My list", myList);
 
-        // Displays the total duration
+
+        // // Displays the total duration
         System.out.println("\nTotal time duration of my list (in seconds):" + myList.totalDuration());
 
-        // Inserts a track to some location
+        // System.out.println(myList.indexOf("Imagine"));
+
+        // // Inserts a track to some location
         myList.add(1, track5);
         display("After adding Yesterday at location 1", myList);
 
-        // Tests the ability to find the locations of track titles
+        // // Tests the ability to find the locations of track titles
         System.out.println("\nIndex of Creep: " + myList.indexOf("Creep"));
         System.out.println("\nIndex of Shake It Off: " + myList.indexOf("Shake It Off"));
 
-        // Removes some tracks
+        // // Removes some tracks
         myList.remove(2);
         display("After removing the track in location 2", myList);
 
@@ -56,19 +60,19 @@ class RuniFi {
         newList.remove("Yellow");
         display("New list after removing Yellow:", newList);
 
-        // Adds all the tracks from the new list to my list 
+        // // Adds all the tracks from the new list to my list 
         myList.add(newList);
         display("My list after merging with new list", myList);
 
-        // Tests the ability to find the track with the shortest duration
+        // // Tests the ability to find the track with the shortest duration
         System.out.println("\nThe shortest track in my list is " + myList.titleOfShortestTrack());
 
-        // Sorts the list 
+        // // Sorts the list 
         myList.sortedInPlace();
         display("My list after sorting by increasing duration", myList);
     }
 
     private static void display(String str, PlayList list) {
-        System.out.println("\n" + str + ":" + list);
+        System.out.println("\n" + str + ":\n" + list);
     }
 }
